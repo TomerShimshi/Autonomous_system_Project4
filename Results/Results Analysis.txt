@@ -1,0 +1,144 @@
+Eval Config:
+USE_PARALLEL         : False                         
+NUM_PARALLEL_CORES   : 8                             
+BREAK_ON_ERROR       : True                          
+RETURN_ON_ERROR      : False                         
+LOG_ON_ERROR         : /content/gdrive/MyDrive/MOT_ENV/TrackEval/error_log.txt
+PRINT_RESULTS        : True                          
+PRINT_ONLY_COMBINED  : False                         
+PRINT_CONFIG         : True                          
+TIME_PROGRESS        : True                          
+DISPLAY_LESS_PROGRESS : False                         
+OUTPUT_SUMMARY       : True                          
+OUTPUT_EMPTY_CLASSES : True                          
+OUTPUT_DETAILED      : True                          
+PLOT_CURVES          : True                          
+
+MotChallenge2DBox Config:
+PRINT_CONFIG         : True                          
+GT_FOLDER            : /content/gdrive/MyDrive/MOT_ENV/TrackEval/data/data/gt
+TRACKERS_FOLDER      : /content/gdrive/MyDrive/MOT_ENV/TrackEval/data/data/trackers
+OUTPUT_FOLDER        : None                          
+TRACKERS_TO_EVAL     : None                          
+CLASSES_TO_EVAL      : ['pedestrian']                
+BENCHMARK            : MOT17                         
+SPLIT_TO_EVAL        : test                          
+INPUT_AS_ZIP         : False                         
+DO_PREPROC           : True                          
+TRACKER_SUB_FOLDER   : data                          
+OUTPUT_SUB_FOLDER    :                               
+TRACKER_DISPLAY_NAMES : None                          
+SEQMAP_FOLDER        : None                          
+SEQMAP_FILE          : None                          
+SEQ_INFO             : None                          
+GT_LOC_FORMAT        : {gt_folder}/{seq}/gt/gt.txt   
+SKIP_SPLIT_FOL       : False                         
+
+CLEAR Config:
+METRICS              : ['HOTA', 'CLEAR', 'Identity', 'VACE']
+THRESHOLD            : 0.5                           
+PRINT_CONFIG         : True                          
+
+Identity Config:
+METRICS              : ['HOTA', 'CLEAR', 'Identity', 'VACE']
+THRESHOLD            : 0.5                           
+PRINT_CONFIG         : True                          
+
+Evaluating 1 tracker(s) on 5 sequence(s) for 1 class(es) on MotChallenge2DBox dataset using the following metrics: HOTA, CLEAR, Identity, VACE, Count
+
+
+Evaluating BoTSORT
+
+    MotChallenge2DBox.get_raw_seq_data(BoTSORT, MOT17-02)                  0.5884 sec
+    MotChallenge2DBox.get_preprocessed_seq_data(pedestrian)                0.1216 sec
+    HOTA.eval_sequence()                                                   0.1966 sec
+    CLEAR.eval_sequence()                                                  0.0319 sec
+    Identity.eval_sequence()                                               0.0123 sec
+    VACE.eval_sequence()                                                   0.0231 sec
+    Count.eval_sequence()                                                  0.0000 sec
+1 eval_sequence(MOT17-02, BoTSORT)                                       0.9766 sec
+    MotChallenge2DBox.get_raw_seq_data(BoTSORT, MOT17-04)                  0.8888 sec
+    MotChallenge2DBox.get_preprocessed_seq_data(pedestrian)                0.2499 sec
+    HOTA.eval_sequence()                                                   0.4293 sec
+    CLEAR.eval_sequence()                                                  0.0652 sec
+    Identity.eval_sequence()                                               0.0203 sec
+    VACE.eval_sequence()                                                   0.0613 sec
+    Count.eval_sequence()                                                  0.0000 sec
+2 eval_sequence(MOT17-04, BoTSORT)                                       1.7195 sec
+    MotChallenge2DBox.get_raw_seq_data(BoTSORT, MOT17-09)                  0.4241 sec
+    MotChallenge2DBox.get_preprocessed_seq_data(pedestrian)                0.1020 sec
+    HOTA.eval_sequence()                                                   0.1349 sec
+    CLEAR.eval_sequence()                                                  0.0199 sec
+    Identity.eval_sequence()                                               0.0108 sec
+    VACE.eval_sequence()                                                   0.0140 sec
+    Count.eval_sequence()                                                  0.0000 sec
+3 eval_sequence(MOT17-09, BoTSORT)                                       0.7089 sec
+    MotChallenge2DBox.get_raw_seq_data(BoTSORT, MOT17-10)                  0.4865 sec
+    MotChallenge2DBox.get_preprocessed_seq_data(pedestrian)                0.1238 sec
+    HOTA.eval_sequence()                                                   0.1877 sec
+    CLEAR.eval_sequence()                                                  0.0261 sec
+    Identity.eval_sequence()                                               0.0099 sec
+    VACE.eval_sequence()                                                   0.0199 sec
+    Count.eval_sequence()                                                  0.0000 sec
+4 eval_sequence(MOT17-10, BoTSORT)                                       0.8570 sec
+    MotChallenge2DBox.get_raw_seq_data(BoTSORT, MOT17-13)                  0.4616 sec
+    MotChallenge2DBox.get_preprocessed_seq_data(pedestrian)                0.1291 sec
+    HOTA.eval_sequence()                                                   0.1774 sec
+    CLEAR.eval_sequence()                                                  0.0236 sec
+    Identity.eval_sequence()                                               0.0099 sec
+    VACE.eval_sequence()                                                   0.0178 sec
+    Count.eval_sequence()                                                  0.0000 sec
+5 eval_sequence(MOT17-13, BoTSORT)                                       0.8226 sec
+
+All sequences for BoTSORT finished in 5.09 seconds
+
+HOTA: BoTSORT-pedestrian           HOTA      DetA      AssA      DetRe     DetPr     AssRe     AssPr     LocA      OWTA      HOTA(0)   LocA(0)   HOTALocA(0)
+MOT17-02                           56.659    66.648    48.801    71.83     83.84     55.438    71.421    87.038    59.055    66.741    83.504    55.731    
+MOT17-04                           90.367    90.885    89.956    93.506    94.042    92.835    93.712    92.779    91.71     97.194    92.176    89.589    
+MOT17-09                           67.238    76.231    59.395    80.169    87.988    71.532    72.944    88.738    69        77.333    86.806    67.13     
+MOT17-10                           68.679    69.651    67.916    74.807    80.932    73.288    79.555    83.831    71.271    87.399    79.97     69.893    
+MOT17-13                           79.129    79.259    79.158    83.713    85.739    86.488    84.298    87.014    81.395    93.136    85.286    79.432    
+COMBINED                           79.104    80.564    78.092    84.932    89.468    82.838    86.945    89.996    81.4      88.679    88.17     78.188    
+
+CLEAR: BoTSORT-pedestrian          MOTA      MOTP      MODA      CLR_Re    CLR_Pr    MTR       PTR       MLR       sMOTA     CLR_TP    CLR_FN    CLR_FP    IDSW      MT        PT        ML        Frag      
+MOT17-02                           76.949    84.859    77.847    81.761    95.432    67.925    22.642    9.434     64.57     8105      1808      388       89        36        12        5         143       
+MOT17-04                           98.328    92.323    98.365    98.898    99.464    98.551    0         1.4493    90.736    23959     267       129       9         68        0         1         42        
+MOT17-09                           87.863    87.505    88.762    89.938    98.71     81.818    13.636    4.5455    76.626    2601      291       34        26        18        3         1         39        
+MOT17-10                           85.839    82.027    86.209    89.321    96.634    77.778    19.444    2.7778    69.786    5311      635       185       22        28        7         1         71        
+MOT17-13                           93.827    85.425    93.921    95.78     98.097    88.636    4.5455    6.8182    79.867    3041      134       59        3         39        2         3         8         
+COMBINED                           91.162    88.867    91.485    93.207    98.185    84.375    10.714    4.9107    80.785    43017     3135      795       149       189       24        11        303       
+
+Identity: BoTSORT-pedestrian       IDF1      IDR       IDP       IDTP      IDFN      IDFP      
+MOT17-02                           62.632    58.146    67.868    5764      4149      2729      
+MOT17-04                           97.115    96.838    97.393    23460     766       628       
+MOT17-09                           75.954    72.58     79.658    2099      793       536       
+MOT17-10                           85.807    82.56     89.32     4909      1037      587       
+MOT17-13                           93.737    92.63     94.871    2941      234       159       
+COMBINED                           87.086    84.878    89.412    39173     6979      4639      
+
+VACE: BoTSORT-pedestrian           SFDA      ATA       
+MOT17-02                           76.705    40.211    
+MOT17-04                           91.668    91.552    
+MOT17-09                           83.224    54.751    
+MOT17-10                           77.484    68.82     
+MOT17-13                           83.408    81.043    
+COMBINED                           83.598    67.751    
+
+Count: BoTSORT-pedestrian          Dets      GT_Dets   IDs       GT_IDs    
+MOT17-02                           8493      9913      90        53        
+MOT17-04                           24088     24226     72        69        
+MOT17-09                           2635      2892      29        22        
+MOT17-10                           5496      5946      47        36        
+MOT17-13                           3100      3175      43        44        
+COMBINED                           43812     46152     281       224       
+
+Timing analysis:
+MotChallenge2DBox.get_raw_seq_data                                     2.8495 sec
+MotChallenge2DBox.get_preprocessed_seq_data                            0.7263 sec
+HOTA.eval_sequence                                                     1.1258 sec
+CLEAR.eval_sequence                                                    0.1668 sec
+Identity.eval_sequence                                                 0.0633 sec
+VACE.eval_sequence                                                     0.1361 sec
+Count.eval_sequence                                                    0.0000 sec
+eval_sequence                                                          5.0846 sec
+Evaluator.evaluate                                                     6.3288 sec
